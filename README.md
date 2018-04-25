@@ -1,2 +1,2 @@
 # hello-world
-A starting point
+A starting point.
