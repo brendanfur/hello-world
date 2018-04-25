@@ -1,5 +1,3 @@
 # Hello World
 
-# A simple app.
-
-
+# App development in progress.
