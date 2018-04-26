@@ -1,5 +1,3 @@
-# Hello World
+Hello World!
 
-# App development in progress.
-
-# Some new content.
+App development in progress.
