@@ -1,9 +1,4 @@
-FROM ubuntu:latest
-RUN apt-get update -y
-RUN apt-get upgrade -y
-RUN apt-get install -y python-pip python-dev build-essential
-COPY . /app
-WORKDIR /app
+FROM python:2.7
+ADD . /todo
+WORKDIR /todo
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
