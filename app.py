@@ -24,6 +24,7 @@ def new():
 
     item_doc = {
         'name': request.form['name'],
+        'license': request.form['license'],
         'description': request.form['description']
     }
     db.tododb.insert_one(item_doc)
