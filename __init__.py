@@ -1,5 +1,9 @@
 import os
-from flask import Flask, redirect, url_for, request, render_template
+from flask import Flask
+from flask import redirect
+from flask import url_for
+from flask import request
+from flask import render_template
 from pymongo import MongoClient
 
 app = Flask(__name__)
@@ -9,7 +13,6 @@ client = MongoClient(
     27017)
 db = client.tododb
 
-
 @app.route('/')
 def todo():
 
@@ -18,14 +21,14 @@ def todo():
 
     return render_template('todo.html', items=items)
 
-
 @app.route('/new', methods=['POST'])
 def new():
 
     item_doc = {
-        'name': request.form['name'],
+        'name_first': request.form['name_first'],
+        'name_last': request.form['name_last'],
         'license': request.form['license'],
-        'description': request.form['description']
+        'modalities': request.form['modalities']
     }
     db.tododb.insert_one(item_doc)
 

@@ -1,12 +1,13 @@
 <form action="/new" method="POST">
-  <input type="text" name="name"></input>
-  <input type="text" name="license"></input>
-  <input type="text" name="description"></input>
+  <input type="text" name="name_first" value="first name"></input>
+  <input type="text" name="name_last" value="last name"></input>
+  <input type="text" name="license" value="license"></input>
+  <input type="text" name="modalities" value="modalities"></input>
   <input type="submit"></input>
 </form>
 
 {% for item in items %}
-  <h1> {{ item.name }} </h1>
-  <h2> {{ item.license }} </h2>
-  <p> {{ item.description }} <p>
+  <h1> {{ item.name_first }} {{ item.name_last }} </h1>
+  <p class="license">License #: {{ item.license }} </h2>
+  <p class="modalities">modalities: {{ item.modalities }} <p>
 {% endfor %}

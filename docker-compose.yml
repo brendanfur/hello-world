@@ -1,12 +1,12 @@
 db:
   image: mongo:3.0.2
-  
+
 web:
   build: .
-  command: python -u app.py
+  command: python -u __init__.py
   ports:
     - "5000:5000"
   volumes:
-    - .:/todo
+    - .:/microverse
   links:
     - db
