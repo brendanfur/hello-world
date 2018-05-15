@@ -21,6 +21,14 @@ def todo():
 
     return render_template('todo.html', items=items)
 
+@app.route('/intake')
+def intake():
+
+    _items = db.intake.find()
+    items = [item for item in _items]
+
+    return render_template('intake.html', items=items)
+
 @app.route('/new', methods=['POST'])
 def new():
 
